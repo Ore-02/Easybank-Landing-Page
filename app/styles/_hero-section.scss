@@ -1,0 +1,104 @@
+.hero-section{
+    margin-bottom: 5.5rem;
+    
+    @include breakpoint-up(large) {
+        padding-right: 0;
+        padding-left: 10.1875rem;
+        display: flex;
+        align-items:center ;
+        background-color: $veryLightGrey;
+        margin-bottom: 0px;
+    }
+
+    .hero-img {
+        position: relative;
+        background-image: url('../../images/bg-intro-mobile.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        min-height: 17.5rem;
+        @include breakpoint-up(large) {
+            display: flex;
+            min-height: 43rem;
+            flex: 3;
+            order: 2;
+            background-image: url('../../images/bg-intro-desktop.svg');
+            background-position: left -6rem;
+            background-size: 160%;
+        
+        }
+
+
+        &::before {
+            content: '';
+            position: absolute;
+            background-image: url('../../images/image-mockups.png');
+            background-size: 77%;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            height: 115%;
+            width: 100%;
+
+            @include breakpoint-up(large) {
+                background-size: 100%;
+                background-position: 7rem -2rem;
+                height: 120%;
+                width: 100%;
+            }
+        }
+    }
+     
+    .hero-text {
+        padding-right: 3.28125rem;
+        padding-left: 3.28125rem;
+        text-align: center;
+        @include breakpoint-up(large) {
+            display: flex;
+            flex-direction: column;
+            flex: 2;
+            order: 1;
+            text-align: left;
+        }
+
+        h1 {
+            font-weight: 300;
+            line-height: 1.15;
+            color: $darkblue;
+            font-size: 2.31rem;
+            margin-bottom: 1.5rem;
+
+            @include breakpoint-up(large) {
+                font-size: 3.25rem;
+            }
+        }
+       
+
+        p {
+            line-height: 1.5;
+            margin-bottom: 2.25rem;
+
+            @include breakpoint-up(large) {
+                font-size: 1rem;
+            }
+        } 
+        }
+
+    .section-btn {
+        padding: 0.875rem 2.1875rem;
+        color: $white;
+        background: linear-gradient(
+            to right,
+            $limegreen,
+            $brightcyan);
+        font-size: $font-sm;
+        font-weight: 400;
+        transition: opacity 300ms ease-in-out;
+        @include breakpoint-up(large) {
+            width: 9.70125rem;
+        }
+        &:hover {
+             opacity: 0.75;
+        }
+
+    }
+}
